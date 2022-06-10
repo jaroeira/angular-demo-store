@@ -1,15 +1,23 @@
 import { Component, OnInit } from '@angular/core';
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  faBars = faBars;
+  faXmark = faXmark;
 
-  constructor() { }
+  isMenuOpen = false;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+    console.log('click');
   }
-
 }
