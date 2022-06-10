@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,6 +7,8 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+  @Input() links: { label: string; path: string }[] = [];
+
   faBars = faBars;
   faXmark = faXmark;
 
