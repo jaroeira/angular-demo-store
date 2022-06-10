@@ -9,6 +9,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ProductDatailComponent } from './pages/product-datail/product-datail.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { LoginComponent } from './pages/login/login.component';
     FooterComponent,
     HomeComponent,
     LoginComponent,
+    ProductDatailComponent,
   ],
   imports: [ShopRoutingModule, SharedModule, FontAwesomeModule],
 })
