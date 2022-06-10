@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -14,12 +15,20 @@ export class HeaderComponent implements OnInit {
 
   isMenuOpen = false;
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
     console.log('click');
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
+
+  onLoginClick(): void {
+    this.router.navigate(['login']);
   }
 }

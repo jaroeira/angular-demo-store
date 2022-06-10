@@ -4,12 +4,16 @@ import { ShopShellComponent } from './layout/shop-shell/shop-shell.component';
 
 // Page Components
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
   {
     path: '',
     component: ShopShellComponent,
-    children: [{ path: '', component: HomeComponent }],
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'login', component: LoginComponent },
+    ],
   },
 ];
 

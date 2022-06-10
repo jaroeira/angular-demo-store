@@ -11,7 +11,7 @@
         class="menu-item py-4 flex flex-col gap-4 items-center justify-center sm:flex-row sm:gap-8"
       >
         <li *ngFor="let link of links">
-          <a href="#">{{ link.label }}</a>
+          <a [routerLink]="link.path">{{ link.label }}</a>
         </li>
       </ul>
       <div class="w-max m-auto flex items-center justify-between space-x-4">
