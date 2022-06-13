@@ -1,0 +1,18 @@
+<section class="flex items-center h-full p-16">
+  <div
+    class="container flex flex-col items-center justify-center px-5 mx-auto my-8 gap-4"
+  >
+    <div class="max-w-md flex flex-col justify-center items-center gap-7">
+      <h2 class="font-extrabold text-5xl uppercase">Error</h2>
+      <p class="text-2xl font-semibold md:text-3xl text-gray-500">
+        Sorry, an error has occurred.
+      </p>
+      <p *ngIf="message" class="text-red-500 text-center">{{ message }}</p>
+      <a
+        class="bg-sky-700 hover:bg-sky-800 text-white py-2 px-4 rounded inline-block mt-4"
+        routerLink="/"
+        >Back to homepage</a
+      >
+    </div>
+  </div>
+</section>

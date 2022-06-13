@@ -13,6 +13,7 @@ import { CategoriesMenuComponent } from './components/categories-menu/categories
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProductsListComponent } from './pages/products-list/products-list.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { ProductsListComponent } from './pages/products-list/products-list.compo
     NotFoundComponent,
     ProductCardComponent,
     ProductsListComponent,
+    ErrorComponent,
   ],
   imports: [ShopRoutingModule, SharedModule],
 })

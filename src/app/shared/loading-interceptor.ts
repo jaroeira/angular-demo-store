@@ -21,7 +21,6 @@ export class LoadingInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       catchError((err, evt) => {
         this.loadingService.setLoading(req.url, false);
-        console.log(err);
 
         throw err;
       }),
