@@ -3,8 +3,9 @@ import { CommonModule } from '@angular/common';
 import { ModalComponent } from './components/modal/modal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DecodeUriPipe } from './pipes/decodeUri.pipe';
 
-const components: any[] = [ModalComponent];
+const components: any[] = [ModalComponent, DecodeUriPipe];
 
 const modules: any[] = [
   CommonModule,

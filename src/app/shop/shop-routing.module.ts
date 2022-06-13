@@ -16,7 +16,7 @@ const routes: Routes = [
     children: [
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'products-list', component: ProductsListComponent },
+      { path: 'products-list/:category', component: ProductsListComponent },
       { path: 'product-detail', component: ProductDetailComponent },
       { path: '404', component: NotFoundComponent },
       { path: '**', redirectTo: '/404' },

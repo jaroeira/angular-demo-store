@@ -1,4 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Category } from '../../model/Category';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-categories-menu',
@@ -11,26 +14,12 @@ export class CategoriesMenuComponent implements OnInit {
   @Output() backdropClicked = new EventEmitter<void>();
   @Output() categoryClicked = new EventEmitter<string>();
 
-  categories = [
-    {
-      path: '/categoryPath1',
-      label: 'Category 1',
-    },
-    {
-      path: '/categoryPath2',
-      label: 'Category 2',
-    },
-    {
-      path: '/categoryPath3',
-      label: 'Category 3',
-    },
-    {
-      path: '/categoryPath4',
-      label: 'Category 4',
-    },
-  ];
+  categories$!: Observable<Category[]>;
 
-  constructor() {}
+  constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.categories$ = this.productService.categories;
+    this.productService.fetchCategories();
+  }
 }

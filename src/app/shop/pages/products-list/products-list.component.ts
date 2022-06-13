@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-products-list',
@@ -93,7 +94,14 @@ export class ProductsListComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  category: string = '';
 
-  ngOnInit(): void {}
+  constructor(private activatedRoute: ActivatedRoute) {}
+
+  ngOnInit(): void {
+    this.activatedRoute.params.subscribe((params) => {
+      const category = params['category'];
+      this.category = category;
+    });
+  }
 }

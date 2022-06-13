@@ -29,6 +29,6 @@ export class ShopShellComponent implements OnInit {
   onCategorySelected(category: string) {
     console.log('onCategorySelected', category);
     this.showCategoriesMenu = false;
-    this.router.navigate(['/products-list']);
+    this.router.navigate(['/products-list/', category]);
   }
 }
