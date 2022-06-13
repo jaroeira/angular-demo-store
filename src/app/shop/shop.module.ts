@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { ShopRoutingModule } from './shop-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Components
 import { ShopShellComponent } from './layout/shop-shell/shop-shell.component';
@@ -10,6 +9,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductDatailComponent } from './pages/product-datail/product-datail.component';
+import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { ProductDatailComponent } from './pages/product-datail/product-datail.co
     HomeComponent,
     LoginComponent,
     ProductDatailComponent,
+    CategoriesMenuComponent,
   ],
-  imports: [ShopRoutingModule, SharedModule, FontAwesomeModule],
+  imports: [ShopRoutingModule, SharedModule],
 })
 export class ShopModule {}

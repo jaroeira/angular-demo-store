@@ -1,0 +1,15 @@
+<app-modal
+  [show]="show"
+  (closeClicked)="closeClicked.emit()"
+  (backdropClicked)="backdropClicked.emit()"
+>
+  <div class="grid grid-cols-2 gap-4">
+    <button
+      class="text-gray-700 hover:text-sky-700 uppercase"
+      *ngFor="let category of categories"
+      (click)="categoryClicked.emit(category.path)"
+    >
+      {{ category.label }}
+    </button>
+  </div>
+</app-modal>

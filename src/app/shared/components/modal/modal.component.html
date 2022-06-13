@@ -1,0 +1,21 @@
+<ng-container *ngIf="show">
+  <div
+    @appearsFromTop
+    class="bg-white rounded-lg shadow min-w-[20rem] md:w-auto w-full px-6 py-4 fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50"
+  >
+    <div class="flex justify-end">
+      <button class="hover:text-sky-700" (click)="onBackdropClicked()">
+        <fa-icon [icon]="faXmark"></fa-icon>
+      </button>
+    </div>
+    <div>
+      <ng-content></ng-content>
+    </div>
+  </div>
+  <!-- backdrop -->
+  <div
+    @fadeInOut
+    class="bg-black opacity-50 h-screen w-screen z-40 left-0 top-0 fixed"
+    (click)="onCloseClick()"
+  ></div>
+</ng-container>
