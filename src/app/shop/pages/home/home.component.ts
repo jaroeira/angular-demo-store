@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service';
+import { Observable } from 'rxjs';
+import { LoadingService } from 'src/app/shared/services/loading.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,14 @@ import { ProductService } from '../../services/product.service';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private productService: ProductService) {}
+  isLoading$!: Observable<boolean>;
+
+  constructor(private loadingService: LoadingService) {}
 
   ngOnInit(): void {
-    this.productService.fetchCategories();
+    this.isLoading$ = this.loadingService.isLoading;
+    this.isLoading$.subscribe((isLoading) => {
+      console.log('isLoading', isLoading);
+    });
   }
 }
