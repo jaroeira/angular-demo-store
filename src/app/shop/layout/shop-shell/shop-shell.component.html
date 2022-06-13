@@ -1,5 +1,19 @@
-<app-header class="sticky top-0" [links]="headerLinks"></app-header>
+<app-header
+  class="sticky top-0"
+  [links]="headerLinks"
+  (categoriesClicked)="onCategoriesClicked()"
+></app-header>
 <main class="md:pb-[19.25rem] sm:pb-[22.25rem] pb-[33.25rem]">
   <router-outlet></router-outlet>
 </main>
-<app-footer class="absolute bottom-0 w-full" [links]="headerLinks"></app-footer>
+<app-footer
+  class="absolute bottom-0 w-full"
+  [links]="headerLinks"
+  (categoriesClicked)="onCategoriesClicked()"
+></app-footer>
+<app-categories-menu
+  [show]="showCategoriesMenu"
+  (closeClicked)="onCategoriesMenuClose()"
+  (backdropClicked)="onCategoriesMenuClose()"
+>
+</app-categories-menu>

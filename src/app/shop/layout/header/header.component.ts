@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
@@ -9,6 +9,7 @@ import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   @Input() links: { label: string; path: string }[] = [];
+  @Output() categoriesClicked = new EventEmitter<void>();
 
   faBars = faBars;
   faXmark = faXmark;

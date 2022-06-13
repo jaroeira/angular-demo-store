@@ -6,17 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  showModal = false;
-
   constructor() {}
 
   ngOnInit(): void {}
-
-  onModalOpen() {
-    this.showModal = true;
-  }
-
-  onModalClose() {
-    this.showModal = false;
-  }
 }

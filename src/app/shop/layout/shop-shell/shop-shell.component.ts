@@ -12,7 +12,17 @@ export class ShopShellComponent implements OnInit {
     { label: 'cart', path: '' },
   ];
 
+  showCategoriesMenu = false;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  onCategoriesMenuClose() {
+    this.showCategoriesMenu = false;
+  }
+
+  onCategoriesClicked() {
+    this.showCategoriesMenu = true;
+  }
 }

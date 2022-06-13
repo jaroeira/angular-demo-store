@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
   @Input() links: { label: string; path: string }[] = [];
+  @Output() categoriesClicked = new EventEmitter<void>();
 
   constructor() {}
 

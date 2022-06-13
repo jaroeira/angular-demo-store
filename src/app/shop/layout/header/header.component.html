@@ -18,7 +18,14 @@
       class="menu-item md:flex md:items-center gap-4 z-[-1] md:z-auto md:static absolute bg-white w-full md:w-auto left-0 md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500"
     >
       <li *ngFor="let link of links">
-        <a [routerLink]="link.path">{{ link.label }}</a>
+        <a
+          *ngIf="link.label !== 'categories'; else categoryMenu"
+          [routerLink]="link.path"
+          >{{ link.label }}</a
+        >
+        <ng-template #categoryMenu>
+          <button (click)="categoriesClicked.emit()">CATEGORIES</button>
+        </ng-template>
       </li>
       <button class="btn--blue" (click)="onLoginClick()">Login</button>
     </ul>

@@ -11,7 +11,14 @@
         class="menu-item py-4 flex flex-col gap-4 items-center justify-center sm:flex-row sm:gap-8"
       >
         <li *ngFor="let link of links">
-          <a [routerLink]="link.path">{{ link.label }}</a>
+          <a
+            *ngIf="link.label !== 'categories'; else categoryMenu"
+            [routerLink]="link.path"
+            >{{ link.label }}</a
+          >
+          <ng-template #categoryMenu>
+            <button (click)="categoriesClicked.emit()">CATEGORIES</button>
+          </ng-template>
         </li>
       </ul>
       <div class="w-max m-auto flex items-center justify-between space-x-4">
