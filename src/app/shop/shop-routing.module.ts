@@ -6,6 +6,7 @@ import { ShopShellComponent } from './layout/shop-shell/shop-shell.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductDatailComponent } from './pages/product-datail/product-datail.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -15,6 +16,8 @@ const routes: Routes = [
       { path: '', component: HomeComponent },
       { path: 'login', component: LoginComponent },
       { path: 'product-datail', component: ProductDatailComponent },
+      { path: '404', component: NotFoundComponent },
+      { path: '**', redirectTo: '/404' },
     ],
   },
 ];

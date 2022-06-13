@@ -10,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { ProductDatailComponent } from './pages/product-datail/product-datail.component';
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CategoriesMenuComponent } from './components/categories-menu/categories
     LoginComponent,
     ProductDatailComponent,
     CategoriesMenuComponent,
+    NotFoundComponent,
   ],
   imports: [ShopRoutingModule, SharedModule],
 })
