@@ -4,7 +4,11 @@
   >
     {{ category | decodeUri }}
   </h2>
-  <div class="flex flex-wrap justify-center gap-4">
-    <app-product-card *ngFor="let product of products"></app-product-card>
+  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+    <app-product-card
+      class="self-stretch"
+      *ngFor="let product of products$ | async"
+      [product]="product"
+    ></app-product-card>
   </div>
 </section>

@@ -1,16 +1,18 @@
-<div class="bg-white rounded shadow md:max-w-md w-full overflow-hidden">
+<div
+  class="bg-white rounded shadow md:max-w-md w-full h-full overflow-hidden flex flex-col justify-between"
+>
   <img
-    class="object-contain w-full h-56"
-    src="https://www.hyperui.dev/photos/toy-1.jpeg"
-    alt=""
+    class="object-contain w-full h-56 pt-2"
+    [src]="product.imageUrl"
+    [alt]="product.title"
   />
   <div class="p-6">
-    <h5 class="mt-4 text-lg font-bold">Product Title</h5>
-    <p class="mt-2 text-sm text-gray-700">$14.99</p>
+    <h5 class="mt-4 text-sm font-bold overflow-hidden">{{ product.title }}</h5>
+    <p class="mt-2 text-sm text-gray-700">{{ product.price | currency }}</p>
     <div class="flex items-center gap-1">
       <p class="text-gray-700">Rating:</p>
       <svg
-        *ngFor="let star of [1, 2, 3, 4, 5]"
+        *ngFor="let star of rating()"
         class="w-5 h-5 text-yellow-400"
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
