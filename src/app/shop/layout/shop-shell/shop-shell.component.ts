@@ -9,7 +9,6 @@ export class ShopShellComponent implements OnInit {
   headerLinks = [
     { label: 'home', path: '' },
     { label: 'categories', path: '' },
-    { label: 'cart', path: '' },
   ];
 
   showCategoriesMenu = false;
@@ -24,5 +23,11 @@ export class ShopShellComponent implements OnInit {
 
   onCategoriesClicked() {
     this.showCategoriesMenu = true;
+  }
+
+  onCategorySelected(category: string) {
+    console.log('onCategorySelected', category);
+    this.showCategoriesMenu = false;
+    //TODO: navigate to category
   }
 }

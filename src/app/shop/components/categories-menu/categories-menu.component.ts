@@ -13,19 +13,19 @@ export class CategoriesMenuComponent implements OnInit {
 
   categories = [
     {
-      path: '/categoryPath',
+      path: '/categoryPath1',
       label: 'Category 1',
     },
     {
-      path: '/categoryPath',
+      path: '/categoryPath2',
       label: 'Category 2',
     },
     {
-      path: '/categoryPath',
+      path: '/categoryPath3',
       label: 'Category 3',
     },
     {
-      path: '/categoryPath',
+      path: '/categoryPath4',
       label: 'Category 4',
     },
   ];
