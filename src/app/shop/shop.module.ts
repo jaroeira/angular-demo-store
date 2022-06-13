@@ -8,10 +8,11 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
-import { ProductDatailComponent } from './pages/product-datail/product-datail.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { CategoriesMenuComponent } from './components/categories-menu/categories-menu.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProductsListComponent } from './pages/products-list/products-list.component';
 
 @NgModule({
   declarations: [
@@ -20,10 +21,11 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     FooterComponent,
     HomeComponent,
     LoginComponent,
-    ProductDatailComponent,
+    ProductDetailComponent,
     CategoriesMenuComponent,
     NotFoundComponent,
     ProductCardComponent,
+    ProductsListComponent,
   ],
   imports: [ShopRoutingModule, SharedModule],
 })
