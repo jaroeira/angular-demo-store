@@ -4,8 +4,15 @@ import { ModalComponent } from './components/modal/modal.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DecodeUriPipe } from './pipes/decodeUri.pipe';
+import { ModalLoadingIndicatorComponent } from './components/modal-loading-indicator/modal-loading-indicator.component';
+import { LoadingIndicatorComponent } from './components/loading-indicator/loading-indicator.component';
 
-const components: any[] = [ModalComponent, DecodeUriPipe];
+const components: any[] = [
+  ModalComponent,
+  ModalLoadingIndicatorComponent,
+  LoadingIndicatorComponent,
+  DecodeUriPipe,
+];
 
 const modules: any[] = [
   CommonModule,

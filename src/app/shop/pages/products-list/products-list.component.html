@@ -4,11 +4,17 @@
   >
     {{ category | decodeUri }}
   </h2>
-  <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4">
+  <div
+    *ngIf="!(isLoading$ | async); else loading"
+    class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4"
+  >
     <app-product-card
       class="self-stretch"
       *ngFor="let product of products$ | async"
       [product]="product"
     ></app-product-card>
   </div>
+  <ng-template #loading>
+    <app-loading-indicator></app-loading-indicator>
+  </ng-template>
 </section>

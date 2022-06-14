@@ -14,8 +14,5 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoading$ = this.loadingService.isLoading;
-    this.isLoading$.subscribe((isLoading) => {
-      console.log('isLoading', isLoading);
-    });
   }
 }
