@@ -1,6 +1,66 @@
-<section>
-  <p>home works!</p>
-  <app-modal-loading-indicator
+<section class="">
+  <div
+    class="text-white bg-gray-900 px-4 py-32 mx-auto lg:h-[31.25rem] justify-center items-center lg:flex flex-col"
+  >
+    <h1
+      class="text-center text-3xl font-extrabold text-transparent sm:text-5xl bg-clip-text bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"
+    >
+      Demo Project.
+
+      <span class="sm:block py-2">Angular Online Store. </span>
+    </h1>
+    <p class="max-w-xl mx-auto mt-4 sm:leading-relaxed sm:text-xl">
+      This is a demo project developed with the angular framework.
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mt-8">
+      <a
+        class="block w-full px-12 py-3 text-sm font-medium text-white bg-blue-600 border border-blue-600 rounded sm:w-auto active:text-opacity-75 hover:bg-transparent hover:text-white focus:outline-none focus:ring"
+        href="/get-started"
+      >
+        See on Github
+      </a>
+    </div>
+  </div>
+
+  <div class="bg-gradient-to-br from-sky-50 to-sky-100">
+    <div class="py-16 lg:max-w-5xl mx-auto">
+      <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
+        <div
+          class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12"
+        >
+          <div class="space-y-6 md:7/12 lg:w-6/12">
+            <h2 class="text-2xl text-blue-900 font-bold md:text-5xl">
+              About this demo project.
+            </h2>
+            <div class="space-y-4">
+              <p class="text-gray-600">
+                This is a demo project developed with the Angular framework. It
+                uses a fake online store api and implements the observable
+                service pattern to handle async requests.
+              </p>
+              <p class="mt-4 text-gray-600">
+                A global loading state and http global error handler are
+                implementet using a http interceptor.
+              </p>
+            </div>
+            <a
+              href="#"
+              class="block w-full py-3 px-6 text-center rounded-full transition bg-blue-200 hover:bg-blue-100 active:bg-blue-300 focus:bg-blue-100 sm:w-max"
+            >
+              <span class="block text-blue-900 font-semibold text-sm">
+                See repository on Github
+              </span>
+            </a>
+          </div>
+          <div class="md:5/12 lg:w-6/12">
+            <img src="assets/angular.png" alt="image" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <app-modal-loading-indicator
     *ngIf="isLoading$ | async"
-  ></app-modal-loading-indicator>
+  ></app-modal-loading-indicator> -->
 </section>
