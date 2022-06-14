@@ -62,4 +62,12 @@ export class ProductService {
         this._productsByCategory.next([...products]);
       });
   }
+
+  fetchProductById(id: number) {
+    return this.http.get(`${API_URL}/${id}`).pipe(
+      map((response) => {
+        return transformFromJSON(response);
+      })
+    );
+  }
 }
